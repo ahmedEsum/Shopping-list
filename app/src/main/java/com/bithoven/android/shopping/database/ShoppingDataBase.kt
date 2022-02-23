@@ -1,15 +1,13 @@
-package com.example.android.shopping.database
+package com.bithoven.android.shopping.database
 
-import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
 @Database(entities = [ShoppingItem::class],version = 1,exportSchema = false)
 abstract class ShoppingDataBase : RoomDatabase() {
 
-    abstract fun getShoppingDao():  ShoppingItemDao
+    abstract fun getShoppingDao(): ShoppingItemDao
 
 //    companion object {
 //        @Volatile

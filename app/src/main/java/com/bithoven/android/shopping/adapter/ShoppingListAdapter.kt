@@ -1,17 +1,17 @@
-package com.example.android.shopping.adapter
+package com.bithoven.android.shopping.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.shopping.contracts.OnItemUpdated
-import com.example.android.shopping.database.ShoppingItem
+import com.bithoven.android.shopping.contracts.OnItemUpdated
+import com.bithoven.android.shopping.database.ShoppingItem
 import com.example.android.shopping.databinding.ShoppingItemBinding
 
 
-class ShoppinngListAdapter(private val onItemUpdated: OnItemUpdated) :
-    ListAdapter<ShoppingItem, ShoppinngListAdapter.ViewHolder>(DiffCallBack) {
+class ShoppingListAdapter(private val onItemUpdated: OnItemUpdated) :
+    ListAdapter<ShoppingItem, ShoppingListAdapter.ViewHolder>(DiffCallBack) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -46,7 +46,6 @@ class ShoppinngListAdapter(private val onItemUpdated: OnItemUpdated) :
         override fun areItemsTheSame(oldItem: ShoppingItem, newItem: ShoppingItem): Boolean {
             return oldItem == newItem
         }
-
         override fun areContentsTheSame(oldItem: ShoppingItem, newItem: ShoppingItem): Boolean {
             return oldItem.amount == newItem.amount
         }

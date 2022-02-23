@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Shopping</string>
+    <string name="app_name">cart list</string>
+    <string name="askToClear" translatable="true">do you want to delete the current list?</string>
+    <string name="cancel" translatable="true">cancel</string>
+    <string name="clear" translatable="true">clear</string>
+    <string name="enterDataCorrectly" translatable="true">please enter the data correctly</string>
+    <string name="button_to_clear_list_s_data" translatable="true">button to clear list\'s data</string>
+    <string name="add_new_item_for_shopping_list" translatable="true">add new item for shopping list</string>
+    <string name="name" translatable="true">product name</string>
+    <string name="amount" translatable="true">amount</string>
+    <string name="proceed" translatable="true">proceed</string>
+    <string name="delete_item" translatable="true">delete item</string>
+    <string name="decrease_item_amount_by_one" translatable="true">decrease item amount by one</string>
+    <string name="increase_item_s_amount_by_one" translatable="true">increase item\'s amount by one</string>
 </resources>

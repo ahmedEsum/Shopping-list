@@ -1,4 +1,4 @@
-package com.example.android.shopping
+package com.bithoven.android.shopping
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

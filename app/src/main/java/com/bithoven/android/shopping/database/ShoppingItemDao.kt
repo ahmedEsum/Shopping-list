@@ -1,4 +1,4 @@
-package com.example.android.shopping.database
+package com.bithoven.android.shopping.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

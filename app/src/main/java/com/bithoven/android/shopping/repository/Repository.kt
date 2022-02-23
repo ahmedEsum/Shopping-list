@@ -1,7 +1,7 @@
-package com.example.android.shopping.repository
+package com.bithoven.android.shopping.repository
 
-import com.example.android.shopping.database.ShoppingDataBase
-import com.example.android.shopping.database.ShoppingItem
+import com.bithoven.android.shopping.database.ShoppingDataBase
+import com.bithoven.android.shopping.database.ShoppingItem
 import javax.inject.Inject
 
 class Repository @Inject constructor(private val shoppingDataBase: ShoppingDataBase) {

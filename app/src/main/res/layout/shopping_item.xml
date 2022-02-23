@@ -2,12 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
-
         <variable
             name="item"
-            type="com.example.android.shopping.database.ShoppingItem" />
+            type="com.bithoven.android.shopping.database.ShoppingItem" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,19 +21,22 @@
                 android:id="@+id/txName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:paddingStart="8dp"
                 android:text="@{item.name}"
+                android:textSize="@dimen/_12sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="textView" />
+                tools:text="textView"
+                 />
 
             <TextView
                 android:id="@+id/txAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:textSize="@dimen/_12sdp"
                 android:text="@{String.valueOf(item.amount)}"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/addImg"
+                app:layout_constraintStart_toStartOf="@+id/removeImg"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="textView" />
 
@@ -43,17 +44,21 @@
                 android:id="@+id/trash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/delete_item"
                 android:src="@drawable/ic_baseline_delete_24"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txName" />
+                app:layout_constraintEnd_toEndOf="@+id/txName"
+                app:layout_constraintStart_toStartOf="@+id/txName"
+                app:layout_constraintTop_toBottomOf="@+id/txName" />
 
             <ImageView
                 android:id="@+id/addImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingRight="16dp"
+                android:contentDescription="@string/increase_item_s_amount_by_one"
                 android:src="@drawable/ic_baseline_add_circle_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txAmount" />
@@ -62,7 +67,9 @@
                 android:id="@+id/removeImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="28dp"
+                android:layout_marginTop="16dp"
+                android:paddingEnd="8dp"
+                android:contentDescription="@string/decrease_item_amount_by_one"
                 android:src="@drawable/ic_secrease"
                 app:layout_constraintEnd_toStartOf="@+id/addImg"
                 app:layout_constraintTop_toBottomOf="@+id/txAmount" />
