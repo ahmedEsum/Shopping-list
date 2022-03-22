@@ -47,9 +47,9 @@ class MainActivity : AppCompatActivity() {
             } else {
                 binding!!.floatButtonClearAll.visibility = View.GONE
             }
-
-
         }
+
+
         binding!!.floatButton.setOnClickListener {
             AddingDialog(this, object : OnDialougeListner {
                 override fun onDialougeListner(item: ShoppingItem) {
@@ -57,6 +57,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }).show()
         }
+
+
+
         binding!!.floatButtonClearAll.setOnClickListener {
 
             val alertDialog = AlertDialog.Builder(this).apply {
